@@ -1,38 +1,148 @@
+.main-container{
+  background: linear-gradient(to right, #eea8ed, #c642fa);
+  height: 100vh;
+}
+
+/* Overall App Styling */
+
 .App {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+/* Title */
+h1 {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form Container */
+.form-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form Inputs and Button */
+.form-container input,
+.form-container textarea,
+.form-container select,
+.form-container button {
+  flex: 1 1 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #e010f3;
+  transform: translateY(-3px);
+}
+
+/* Task Table */
+.tasks-container table {
+  width: 100%;
+  border-radius: 1px;
+  border-collapse: collapse;
+  transition: transform 0.3s ease-in-out;
+}
+.tasks-container:hover {
+  transform: scale(1.02);
+}
+
+.tasks-container th,
+.tasks-container td {
+  border: 1px solid #060606;
+  padding: 10px;
+  border-radius: 1px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.tasks-container th {
+  background-color: #b3dcbc;
+  border-radius: 1px;
+}
+
+.tasks-container tr:hover {
+  border-radius: 1px;
+  background-color: #12e640;
+}
+
+/* Buttons in Task Table */
+.tasks-container button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.tasks-container button:first-of-type {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tasks-container button:last-of-type {
+  background-color: #dc3545;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tasks-container button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-container input,
+  .form-container textarea,
+  .form-container select,
+  .form-container button {
+    flex: 1 1 auto;
+  }
+
+  .tasks-container table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-container input,
+  .form-container textarea,
+  .form-container select,
+  .form-container button {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
