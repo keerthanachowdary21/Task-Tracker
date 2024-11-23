@@ -4,7 +4,9 @@
 Build a simple React app to manage daily tasks effectively.
 
 ## Preview
-[Screenshot](https://drive.google.com/uc?id=1X66xk_wzSkaB6oZBZpKKcY7z4ugtAdzc)
+<div>
+<img src="https://drive.google.com/uc?id=1X66xk_wzSkaB6oZBZpKKcY7z4ugtAdzc" alt="Task Screenshot" />
+</div>
 
 ## Features
 ### Core Functionalities
