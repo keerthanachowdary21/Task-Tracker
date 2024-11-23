@@ -1,4 +1,4 @@
-# React Assignment: Task Tracker
+# Task Tracker
 
 ## Objective
 Build a simple React app to manage daily tasks effectively.
